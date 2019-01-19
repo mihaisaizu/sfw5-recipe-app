@@ -7,7 +7,7 @@ jobs:
   build:
     docker:
       # specify the version you desire here
-      - image: circleci/openjdk:8-jdk
+      - image: circleci/openjdk:11-jdk
 
       # Specify service dependencies here if necessary
       # CircleCI maintains a library of pre-built images
@@ -30,6 +30,8 @@ jobs:
             # fallback to using the latest cache if no exact match is found
             - v1-dependencies-
 
+      - run: mvn install -DskipTests
+
       - run: mvn dependency:go-offline
 
       - save_cache:
@@ -39,4 +41,3 @@ jobs:
 
       # run tests!
       - run: mvn integration-test
-
