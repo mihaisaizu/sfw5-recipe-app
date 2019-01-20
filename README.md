@@ -1,3 +1,3 @@
 Recipe App
 
-[![CircleCI](https://circleci.com/gh/mihaisaizu/sfw5-recipe-app.svg?style=svg)](https://circleci.com/gh/mihaisaizu/sfw5-recipe-app)
+[![CircleCI](https://circleci.com/gh/mihaisaizu/my-pet-clinic.svg?style=svg)](https://circleci.com/gh/mihaisaizu/my-pet-clinic)

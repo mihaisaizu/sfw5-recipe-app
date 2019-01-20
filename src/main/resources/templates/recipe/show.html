@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Recipe App - Index Page</title>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+          integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous"
+          th:href="@{/webjars/bootstrap/4.2.1/css/bootstrap.min.css}">
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+            integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+            crossorigin="anonymous"></script>
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"
+                    integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"
+                    th:src="@{/webjars/bootstrap/4.2.1/js/bootstrap.min.js}"></script>
+</head>
+<body>
+<div class="container-fluid" style="margin-top: 20px">
+    <div class="form-row">
+        <div class="col-md-6 offset-md-3">
+            <div class="card-row">
+                <div class="card bg-white border-primary">
+                    <div class="card-header bg-primary">
+                        <h1 class="card-title" th:text="${recipe.description}">Recipe Description Here!</h1>
+                    </div>
+                    <div class="card-body border-primary">
+                        <div class="form-row">
+                            <div class="col-md-3">
+                                <h6>Categories:</h6>
+                            </div>
+                            <div class="col-md-9">
+                                <ul>
+                                    <li>cat one</li>
+                                    <li>cat two</li>
+                                    <li>cat three</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="col-md-3">
+                                <h6>Prep Time:</h6>
+                            </div>
+                            <div class="col-md-3">
+                                <p>30 min</p>
+                            </div>
+                            <div class="col-md-3">
+                                <h6>Difficulty:</h6>
+                            </div>
+                            <div class="col-md-3">
+                                <p>Easy</p>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="col-md-3">
+                                <h6>Cooktime:</h6>
+                            </div>
+                            <div class="col-md-3">
+                                <p>30 min</p>
+                            </div>
+                            <div class="col-md-3">
+                                <h6>Servings:</h6>
+                            </div>
+                            <div class="col-md-3">
+                                <p>4</p>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="col-md-3">
+                                <h6>Source:</h6>
+                            </div>
+                            <div class="col-md-3">
+                                <p>30 min</p>
+                            </div>
+                            <div class="col-md-3">
+                                <h6>URL:</h6>
+                            </div>
+                            <div class="col-md-3">
+                                <p>http://www.example.com</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card bg-white border-primary"  style="margin-top: 20px">
+                    <div class="card-header bg-primary">
+                        <h1 class="card-title" >Ingredients</h1>
+                    </div>
+                    <div class="card-body">
+                        <div class="form-row">
+                            <div class="col-md-12">
+                                <ul>
+                                    <li>1 Cup of milk</li>
+                                    <li>1 Teaspoon of chocolate</li>
+                                    <li>1 Teaspoon of Sugar</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card bg-white border-primary"  style="margin-top: 20px">
+                    <div class="card-header bg-primary">
+                        <h1 class="card-title" >Directions</h1>
+                    </div>
+                    <div class="card-body">
+                        <div class="form-row">
+                            <div class="col-md-12">
+                                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget
+                                    dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes,
+                                    ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.
+                                    Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec,
+                                    vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae,
+                                    justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus.
+                                    Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula,
+                                    porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in,
+                                    viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet.
+                                    Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur
+                                    ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus
+                                    eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque
+                                    sed ipsum.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card bg-white border-primary"  style="margin-top: 20px">
+                    <div class="card-header bg-primary">
+                        <h1 class="card-title" >Notes</h1>
+                    </div>
+                    <div class="card-body">
+                        <div class="form-row">
+                            <div class="col-md-12">
+                                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget
+                                    dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes,
+                                    nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium
+                                    quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet
+                                    nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae,
+                                    justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus.
+                                    Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula,
+                                    porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in,
+                                    viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet.
+                                    Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur
+                                    ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus
+                                    eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque
+                                    sed ipsum.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
