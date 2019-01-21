@@ -47,7 +47,7 @@
                                 <td><a href="#">View</a></td>
                             </tr>
                             <tr th:each="recipe : ${recipes}">
-                                <!--*@thimesVar id="recipe" type="com.mihai.recipeapp.domain.Recipe"*-->
+                                <!--/*@thymesVar id="recipe" type="com.mihai.recipeapp.domain.Recipe"*/-->
                                 <td th:text="${recipe.id}">355</td>
                                 <td th:text="${recipe.description}">Tasty Goodness 3</td>
                                 <td><a href="#" th:href="@{'/recipe/show/' + ${recipe.id}}">View</a></td>
