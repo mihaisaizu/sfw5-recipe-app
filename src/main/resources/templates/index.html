@@ -13,12 +13,13 @@
             crossorigin="anonymous"></script>
 
     <!-- Latest compiled and minified JavaScript -->
-    <script <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"
-                    integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"
-                    th:src="@{/webjars/bootstrap/4.2.1/js/bootstrap.min.js}"></script>
+    <script
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"
+            integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"
+            th:src="@{/webjars/bootstrap/4.2.1/js/bootstrap.min.js}"></script>
 </head>
 <body>
-<div class="container-fluid" style="margin-top: 20px">
+<div class="container-fluid" style="margin: 20px">
     <div class="form-row">
         <div class="col-md-6 offset-md-3">
             <div class="card border-primary">
@@ -28,26 +29,28 @@
                 <div class="card-title">
                     <div class="table-responsive-md" th:if="${not #lists.isEmpty(recipes)}">
                         <table class="table table-hover">
+                            <thead class="bg-white">
                             <tr>
                                 <th>ID</th>
                                 <th>Description</th>
                                 <th>View Recipe</th>
                             </tr>
+                            </thead>
                             <tr th:remove="all">
                                 <td>1</td>
                                 <td>Tasty Goodness 1</td>
-                                <td><a href="#">View</a> </td>
+                                <td><a href="#">View</a></td>
                             </tr>
                             <tr th:remove="all">
                                 <td>2</td>
                                 <td>Tasty Goodness 2</td>
-                                <td><a href="#">View</a> </td>
+                                <td><a href="#">View</a></td>
                             </tr>
                             <tr th:each="recipe : ${recipes}">
                                 <!--*@thimesVar id="recipe" type="com.mihai.recipeapp.domain.Recipe"*-->
                                 <td th:text="${recipe.id}">355</td>
                                 <td th:text="${recipe.description}">Tasty Goodness 3</td>
-                                <td><a href="#" th:href="@{'/recipe/show/' + ${recipe.id}}">View</a> </td>
+                                <td><a href="#" th:href="@{'/recipe/show/' + ${recipe.id}}">View</a></td>
                             </tr>
                         </table>
                     </div>

@@ -26,10 +26,10 @@ public class IndexControllerTest {
     IndexController indexController;
 
     @Mock
-    private RecipeService recipeService;
+    RecipeService recipeService;
 
     @Mock
-    private Model model;
+    Model model;
 
     @Before
     public void before(){
