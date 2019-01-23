@@ -1,4 +1,4 @@
-package com.mihai.recipeapp.converts;
+package com.mihai.recipeapp.converters;
 
 import com.mihai.recipeapp.commands.UnitOfMeasureCommand;
 import com.mihai.recipeapp.domain.UnitOfMeasure;

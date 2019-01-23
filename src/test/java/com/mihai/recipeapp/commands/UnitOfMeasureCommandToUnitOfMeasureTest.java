@@ -1,6 +1,6 @@
 package com.mihai.recipeapp.commands;
 
-import com.mihai.recipeapp.converts.UnitOfMeasureCommandToUnitOfMeasure;
+import com.mihai.recipeapp.converters.UnitOfMeasureCommandToUnitOfMeasure;
 import com.mihai.recipeapp.domain.UnitOfMeasure;
 import org.junit.Before;
 import org.junit.Test;

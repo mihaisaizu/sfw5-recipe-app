@@ -1,4 +1,4 @@
-package com.mihai.recipeapp.converts;
+package com.mihai.recipeapp.converters;
 
 import com.mihai.recipeapp.commands.UnitOfMeasureCommand;
 import com.mihai.recipeapp.domain.UnitOfMeasure;
@@ -10,7 +10,7 @@ import static org.junit.Assert.*;
 public class UnitOfMeasureCommandToUnitOfMeasureTest {
 
     public static final String DESCRIPTION = "description";
-    public static final Long LONG_VALUE = new Long(1L);
+    public static final Long LONG_VALUE = Long.valueOf(1L);
 
     UnitOfMeasureCommandToUnitOfMeasure converter;
 
@@ -21,7 +21,7 @@ public class UnitOfMeasureCommandToUnitOfMeasureTest {
     }
 
     @Test
-    public void testNullParamter() throws Exception {
+    public void testNullParameter() throws Exception {
         assertNull(converter.convert(null));
     }
 

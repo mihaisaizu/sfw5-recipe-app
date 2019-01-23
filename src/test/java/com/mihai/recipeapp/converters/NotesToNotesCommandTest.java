@@ -1,4 +1,4 @@
-package com.mihai.recipeapp.converts;
+package com.mihai.recipeapp.converters;
 
 import com.mihai.recipeapp.commands.NotesCommand;
 import com.mihai.recipeapp.domain.Notes;

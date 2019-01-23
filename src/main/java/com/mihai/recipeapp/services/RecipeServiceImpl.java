@@ -1,8 +1,8 @@
 package com.mihai.recipeapp.services;
 
 import com.mihai.recipeapp.commands.RecipeCommand;
-import com.mihai.recipeapp.converts.RecipeCommandToRecipe;
-import com.mihai.recipeapp.converts.RecipeToRecipeCommand;
+import com.mihai.recipeapp.converters.RecipeCommandToRecipe;
+import com.mihai.recipeapp.converters.RecipeToRecipeCommand;
 import com.mihai.recipeapp.domain.Recipe;
 import com.mihai.recipeapp.repositories.RecipeRepository;
 import lombok.extern.slf4j.Slf4j;
@@ -53,5 +53,4 @@ public class RecipeServiceImpl implements RecipeService {
         log.debug("Saved recipe Id: " + savedRecipe.getId());
         return recipeToRecipeCommand.convert(savedRecipe);
     }
-
 }

@@ -1,7 +1,7 @@
 package com.mihai.recipeapp.services;
 
-import com.mihai.recipeapp.converts.RecipeCommandToRecipe;
-import com.mihai.recipeapp.converts.RecipeToRecipeCommand;
+import com.mihai.recipeapp.converters.RecipeCommandToRecipe;
+import com.mihai.recipeapp.converters.RecipeToRecipeCommand;
 import com.mihai.recipeapp.domain.Recipe;
 import com.mihai.recipeapp.repositories.RecipeRepository;
 import org.junit.Before;
