@@ -1,6 +1,5 @@
 package com.mihai.recipeapp.converts;
 
-import com.mihai.recipeapp.commands.IngredientCommand;
 import com.mihai.recipeapp.domain.Ingredient;
 import com.mihai.recipeapp.domain.Recipe;
 import com.mihai.recipeapp.domain.UnitOfMeasure;

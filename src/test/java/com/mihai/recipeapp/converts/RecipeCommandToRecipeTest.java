@@ -1,7 +1,6 @@
 package com.mihai.recipeapp.converts;
 
 import com.mihai.recipeapp.commands.CategoryCommand;
-import com.mihai.recipeapp.commands.IngredientCommand;
 import com.mihai.recipeapp.commands.NotesCommand;
 import com.mihai.recipeapp.commands.RecipeCommand;
 import com.mihai.recipeapp.domain.Difficulty;
