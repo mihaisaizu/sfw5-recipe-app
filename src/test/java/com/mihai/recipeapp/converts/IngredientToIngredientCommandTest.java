@@ -1,5 +1,6 @@
 package com.mihai.recipeapp.converts;
 
+import com.mihai.recipeapp.commands.IngredientCommand;
 import com.mihai.recipeapp.domain.Ingredient;
 import com.mihai.recipeapp.domain.Recipe;
 import com.mihai.recipeapp.domain.UnitOfMeasure;
@@ -15,8 +16,8 @@ public class IngredientToIngredientCommandTest {
     public static final Recipe RECIPE = new Recipe();
     public static final BigDecimal AMOUNT = new BigDecimal("1");
     public static final String DESCRIPTION = "Cheeseburger";
-    public static final Long UOM_ID = new Long(2L);
-    public static final Long ID_VALUE = new Long(1L);
+    public static final Long UOM_ID = Long.valueOf(2L);
+    public static final Long ID_VALUE = Long.valueOf(1L);
 
 
     IngredientToIngredientCommand converter;
