@@ -1,7 +1,6 @@
 package mihai.recipeapp.converters;
 
 import mihai.recipeapp.commands.RecipeCommand;
-import com.mihai.recipeapp.domain.*;
 import mihai.recipeapp.domain.*;
 import org.junit.Assert;
 import org.junit.Before;
