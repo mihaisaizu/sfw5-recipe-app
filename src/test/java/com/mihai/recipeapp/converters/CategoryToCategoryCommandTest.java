@@ -11,21 +11,21 @@ public class CategoryToCategoryCommandTest {
 
     public static final Long ID_VALUE = Long.valueOf(1L);
     public static final String DESCRIPTION = "descript";
-    CategoryToCategoryCommand convter;
+    CategoryToCategoryCommand converter;
 
     @Before
     public void setUp() throws Exception {
-        convter = new CategoryToCategoryCommand();
+        converter = new CategoryToCategoryCommand();
     }
 
     @Test
     public void testNullObject() throws Exception {
-        assertNull(convter.convert(null));
+        assertNull(converter.convert(null));
     }
 
     @Test
     public void testEmptyObject() throws Exception {
-        assertNotNull(convter.convert(new Category()));
+        assertNotNull(converter.convert(new Category()));
     }
 
     @Test
@@ -36,7 +36,7 @@ public class CategoryToCategoryCommandTest {
         category.setDescription(DESCRIPTION);
 
         //when
-        CategoryCommand categoryCommand = convter.convert(category);
+        CategoryCommand categoryCommand = converter.convert(category);
 
         //then
         assertEquals(ID_VALUE, categoryCommand.getId());
