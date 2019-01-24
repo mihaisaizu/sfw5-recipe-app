@@ -13,18 +13,18 @@
             crossorigin="anonymous"></script>
 
     <!-- Latest compiled and minified JavaScript -->
-    <script <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"
                     integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"
                     th:src="@{/webjars/bootstrap/4.2.1/js/bootstrap.min.js}"></script>
 </head>
 <body>
+<!--/*@thymesVar id="recipe" type="com.mihai.recipeapp.domain.Recipe"*/-->
 <div class="container-fluid" style="margin: 20px">
     <div class="form-row">
         <div class="col-md-6 offset-md-3">
             <div class="card-row">
                 <div class="card border-primary">
                     <div class="card-header bg-primary">
-                        <!--/*@thymesVar id="recipe" type="com.mihai.recipeapp.domain.Recipe"*/-->
                         <h1 class="card-title" th:text="${recipe.description}">Recipe Description Here!</h1>
                     </div>
                     <div class="card-body border-primary">
@@ -36,7 +36,6 @@
                                 <ul>
                                     <li th:remove="all">cat one</li>
                                     <li th:remove="all">cat two</li>
-                                    <!--/*@thymesVar id="recipe" type="com.mihai.recipeapp.domain.Recipe"*/-->
                                     <li th:each="category : ${recipe.categories}" th:text="${category.getDescription()}">cat tree</li>
                                 </ul>
                             </div>
@@ -46,14 +45,12 @@
                                 <h6>Prep Time:</h6>
                             </div>
                             <div class="col-md-3">
-                                <!--/*@thymesVar id="recipe" type="com.mihai.recipeapp.domain.Recipe"*/-->
                                 <p th:text="${(recipe.prepTime + ' Min')}">30 min</p>
                             </div>
                             <div class="col-md-3">
                                 <h6>Difficulty:</h6>
                             </div>
                             <div class="col-md-3">
-                                <!--/*@thymesVar id="recipe" type="com.mihai.recipeapp.domain.Recipe"*/-->
                                 <p th:text="${recipe.difficulty}">easy</p>
                             </div>
                         </div>
@@ -62,14 +59,12 @@
                                 <h6>Cooktime:</h6>
                             </div>
                             <div class="col-md-3">
-                                <!--/*@thymesVar id="recipe" type="com.mihai.recipeapp.domain.Recipe"*/-->
                                 <p th:text="${(recipe.cookTime + ' Min')}">30 min</p>
                             </div>
                             <div class="col-md-3">
                                 <h6>Servings:</h6>
                             </div>
                             <div class="col-md-3">
-                                <!--/*@thymesVar id="recipe" type="com.mihai.recipeapp.domain.Recipe"*/-->
                                 <p th:text="${recipe.servings}">4</p>
                             </div>
                         </div>
@@ -78,14 +73,12 @@
                                 <h6>Source:</h6>
                             </div>
                             <div class="col-md-3">
-                                <!--/*@thymesVar id="recipe" type="com.mihai.recipeapp.domain.Recipe"*/-->
                                 <p th:text="${recipe.source}">source</p>
                             </div>
                             <div class="col-md-3">
                                 <h6>URL:</h6>
                             </div>
                             <div class="col-md-3">
-                                <!--/*@thymesVar id="recipe" type="com.mihai.recipeapp.domain.Recipe"*/-->
                                 <p th:text="${recipe.url}">www.example.com</p>
                             </div>
                         </div>
@@ -101,7 +94,6 @@
                                 <ul>
                                     <li th:remove="all">1 Cup of milk</li>
                                     <li th:remove="all">1 Teaspoon of chocolate</li>
-                                    <!--/*@thymesVar id="recipe" type="com.mihai.recipeapp.domain.Recipe"*/-->
                                     <li th:each="ingredient : ${recipe.ingredients}"
                                         th:text="${(ingredient.getAmount() +
                                         ' ' + ingredient.uom.getDescription() +
@@ -118,7 +110,6 @@
                     <div class="card-body">
                         <div class="form-row">
                             <div class="col-md-12">
-                                <!--/*@thymesVar id="recipe" type="com.mihai.recipeapp.domain.Recipe"*/-->
                                 <p th:text="${recipe.directions}">
                                 Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget
                                     dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes,
@@ -144,7 +135,6 @@
                     <div class="card-body">
                         <div class="form-row">
                             <div class="col-md-12">
-                                <!--/*@thymesVar id="recipe" type="com.mihai.recipeapp.domain.Recipe"*/-->
                                 <p th:text="${recipe.notes.recipeNotes}">
                                 Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget
                                     dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes,
