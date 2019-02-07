@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Recipe App - Index Page</title>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+          integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous"
+          th:href="@{/webjars/bootstrap/4.2.1/css/bootstrap.min.css}">
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+            integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+            crossorigin="anonymous"></script>
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"
+                    integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"
+                    th:src="@{/webjars/bootstrap/4.2.1/js/bootstrap.min.js}"></script>
+</head>
+<body>
+<!--/*@thymesVar id="ingredient" type="mihai.recipeapp.commands.IngredientCommand"*/-->
+<div class="container-fluid" style="margin: 20px">
+    <div class="form-row">
+        <div class="col-md-6 offset-md-3">
+            <div class="card-row">
+                <div class="card border-primary">
+                    <div class="card-header bg-primary">
+                        <h1 class="card-title">Ingredients</h1>
+                    </div>
+                    <div class="card-body border-primary">
+                        <div class="table-responsive">
+                            <table class="table table-hover ">
+                                <thead class="thead-inverse">
+                                <tr>
+                                    <th>ID</th>
+                                    <th>Description</th>
+                                </tr>
+                                </thead>
+                                <tr th:remove="all">
+                                    <td>12333</td>
+                                    <td>Tasty Goodness 2</td>
+                                    <td><a href="#">View</a></td>
+                                    <td><a href="#">Update</a></td>
+                                    <td><a href="#">Delete</a></td>
+                                </tr>
+                                <tr>
+                                    <td th:text="${ingredient.id}">334</td>
+                                    <td th:text="${ingredient.amount} + ' ' + ${ingredient.uom.getDescription()} + ' ' + ${ingredient.description}">Tasty Goodness 3</td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
