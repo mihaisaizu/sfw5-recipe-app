@@ -14,8 +14,8 @@
 
     <!-- Latest compiled and minified JavaScript -->
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"
-                    integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"
-                    th:src="@{/webjars/bootstrap/4.2.1/js/bootstrap.min.js}"></script>
+            integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"
+            th:src="@{/webjars/bootstrap/4.2.1/js/bootstrap.min.js}"></script>
 </head>
 <body>
 <!--/*@thymesVar id="recipe" type="mihai.recipeapp.domain.Recipe"*/-->
@@ -36,7 +36,9 @@
                                 <ul>
                                     <li th:remove="all">cat one</li>
                                     <li th:remove="all">cat two</li>
-                                    <li th:each="category : ${recipe.categories}" th:text="${category.getDescription()}">cat tree</li>
+                                    <li th:each="category : ${recipe.categories}"
+                                        th:text="${category.getDescription()}">cat tree
+                                    </li>
                                 </ul>
                             </div>
                         </div>
@@ -45,7 +47,7 @@
                                 <h6>Prep Time:</h6>
                             </div>
                             <div class="col-md-3">
-                                <p th:text="${(recipe.prepTime + ' Min')}">30 min</p>
+                                <p th:text="${(recipe.prepTime) + ' Min'}">30 min</p>
                             </div>
                             <div class="col-md-3">
                                 <h6>Difficulty:</h6>
@@ -59,7 +61,7 @@
                                 <h6>Cooktime:</h6>
                             </div>
                             <div class="col-md-3">
-                                <p th:text="${(recipe.cookTime + ' Min')}">30 min</p>
+                                <p th:text="${(recipe.cookTime) + ' Min'}">30 min</p>
                             </div>
                             <div class="col-md-3">
                                 <h6>Servings:</h6>
@@ -84,17 +86,18 @@
                         </div>
                     </div>
                 </div>
-                <div class="card bg-white border-primary"  style="margin-top: 20px">
+                <div class="card bg-white border-primary" style="margin-top: 20px">
                     <div class="card-header bg-primary">
                         <div class="row">
                             <div class="col-md-9">
                                 <h1 class="panel-title">Ingredients</h1>
                             </div>
                             <div class="col-md-1">
-                                <a class="btn btn-light" href="#" th:href="@{'/recipe/' + ${recipe.id} + '/ingredients'}" role="button">View</a>
+                                <a class="btn btn-light" href="#"
+                                   th:href="@{'/recipe/' + ${recipe.id} + '/ingredients'}" role="button">View</a>
                             </div>
                         </div>
-                        </div>
+                    </div>
                     <div class="card-body">
                         <div class="form-row">
                             <div class="col-md-12">
@@ -104,21 +107,22 @@
                                     <li th:each="ingredient : ${recipe.ingredients}"
                                         th:text="${(ingredient.getAmount() +
                                         ' ' + ingredient.uom.getDescription() +
-                                        ' - ' + ingredient.getDescription())}">1 Teaspoon of Sugar</li>
+                                        ' - ' + ingredient.getDescription())}">1 Teaspoon of Sugar
+                                    </li>
                                 </ul>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="card bg-white border-primary"  style="margin-top: 20px">
+                <div class="card bg-white border-primary" style="margin-top: 20px">
                     <div class="card-header bg-primary">
-                        <h1 class="card-title" >Directions</h1>
+                        <h1 class="card-title">Directions</h1>
                     </div>
                     <div class="card-body">
                         <div class="form-row">
                             <div class="col-md-12">
                                 <p th:text="${recipe.directions}">
-                                Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget
+                                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget
                                     dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes,
                                     ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.
                                     Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec,
@@ -135,15 +139,15 @@
                         </div>
                     </div>
                 </div>
-                <div class="card bg-white border-primary"  style="margin-top: 20px">
+                <div class="card bg-white border-primary" style="margin-top: 20px">
                     <div class="card-header bg-primary">
-                        <h1 class="card-title" >Notes</h1>
+                        <h1 class="card-title">Notes</h1>
                     </div>
                     <div class="card-body">
                         <div class="form-row">
                             <div class="col-md-12">
                                 <p th:text="${recipe.notes.recipeNotes}">
-                                Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget
+                                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget
                                     dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes,
                                     nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium
                                     quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet
