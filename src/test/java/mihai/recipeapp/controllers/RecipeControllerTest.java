@@ -2,6 +2,7 @@ package mihai.recipeapp.controllers;
 
 import mihai.recipeapp.commands.RecipeCommand;
 import mihai.recipeapp.domain.Recipe;
+import mihai.recipeapp.exceptions.NotFoundException;
 import mihai.recipeapp.services.RecipeService;
 import org.junit.Before;
 import org.junit.Test;
@@ -45,6 +46,15 @@ public class RecipeControllerTest {
                 .andExpect(status().isOk())
                 .andExpect(view().name("recipe/show"))
                 .andExpect(model().attributeExists("recipe"));
+    }
+
+    @Test
+    public void testGetRecipeNotFound() throws Exception{
+        Recipe recipe = new Recipe();
+        recipe.setId(1L);
+        when(recipeService.findById(anyLong())).thenThrow(NotFoundException.class);
+        mockMvc.perform(get("/recipe/1/show"))
+                .andExpect(status().isNotFound());
     }
 
     @Test

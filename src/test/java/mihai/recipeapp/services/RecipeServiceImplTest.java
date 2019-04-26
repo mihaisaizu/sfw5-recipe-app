@@ -4,11 +4,13 @@ import mihai.recipeapp.commands.RecipeCommand;
 import mihai.recipeapp.converters.RecipeCommandToRecipe;
 import mihai.recipeapp.converters.RecipeToRecipeCommand;
 import mihai.recipeapp.domain.Recipe;
+import mihai.recipeapp.exceptions.NotFoundException;
 import mihai.recipeapp.repositories.RecipeRepository;
 import org.junit.Before;
 import org.junit.Test;
 import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
+import org.springframework.test.web.servlet.MockMvc;
 
 import java.util.HashSet;
 import java.util.Optional;
@@ -17,6 +19,8 @@ import java.util.Set;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
 import static org.mockito.Mockito.*;
+import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
+import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
 public class RecipeServiceImplTest {
 
@@ -30,6 +34,8 @@ public class RecipeServiceImplTest {
 
     @Mock
     RecipeCommandToRecipe recipeCommandToRecipe;
+
+    MockMvc mockMvc;
 
     @Before
     public void setUp() {
@@ -48,6 +54,14 @@ public class RecipeServiceImplTest {
         assertNotNull("Null recipe returned.", returnedRecipe);
         verify(recipeRepository, times(1)).findById(anyLong());
         verify(recipeRepository, never()).findAll();
+
+    }
+
+    @Test(expected = NotFoundException.class)
+    public void getRecipeByIdTestNotFound() throws Exception{
+        Optional<Recipe> recipeOptional = Optional.empty();
+        when(recipeRepository.findById(anyLong())).thenReturn(recipeOptional);
+        Recipe recipeReturned = recipeService.findById(1L);
 
     }
 
@@ -70,6 +84,7 @@ public class RecipeServiceImplTest {
         verify(recipeRepository, times(1)).findById(anyLong());
         verify(recipeRepository, never()).findAll();
     }
+
 
     @Test
     public void getRecipesTest() {
