@@ -25,10 +25,14 @@
             <div class="card-row">
                 <div class="card border-primary">
                     <div class="card-header bg-primary">
-                        <h1 class="card-title" th:text="${recipe.description}">Recipe Description Here!</h1>
-                        <div class="col-md-3">
-                            <a class="btn btn-light" href="#"
-                               th:href="@{'/recipe/' + ${recipe.id} + '/image'}" role="button">Change Image</a>
+                        <div class="row">
+                            <div class="col-md-9">
+                                <h1 class="panel-title">Ingredients</h1>
+                            </div>
+                            <div class="col-md-3">
+                                <a class="btn btn-light" href="#"
+                                   th:href="@{'/recipe/' + ${recipe.id} + '/ingredients'}" role="button">Change Image</a>
+                            </div>
                         </div>
                     </div>
 

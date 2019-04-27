@@ -22,7 +22,8 @@
     <div class="form-row">
         <div class="col-md-6 offset-md-3">
             <!--/*@thymesVar id="ingredient" type="mihai.recipeapp.commands.IngredientCommand"*/-->
-            <form th:object="${ingredient}" th:action="@{'/recipe/' + ${ingredient.getRecipeId()} + '/ingredient'} " method="post">
+            <form th:object="${ingredient}" th:action="@{'/recipe/' + ${ingredient.getRecipeId()} + '/ingredient'} "
+                  method="post">
                 <input type="hidden" th:field="*{id}"/>
                 <div class="card-body">
                     <div class="card border-primary">
@@ -52,7 +53,7 @@
                             </div>
                         </div>
                     </div>
-                <button type="submit" class="btn-primary" style="margin-top: 20px">Submit</button>
+                    <button type="submit" class="btn btn-primary" style="margin-top: 20px">Submit</button>
                 </div>
             </form>
         </div>

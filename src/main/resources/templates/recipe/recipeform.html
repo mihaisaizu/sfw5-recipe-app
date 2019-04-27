@@ -92,11 +92,11 @@
                     <div class="card bg-white border-primary"  style="margin-top: 20px">
                         <div class="card-header bg-primary">
                             <div class="row">
-                                <div class="col-md-11 ">
+                                <div class="col-md-9 ">
                                     <h1 class="panel-title">Ingredients</h1>
                                 </div>
                                 <div class="col-md-1">
-                                    <a class="btn btn-light" href="#" role="button">Edit</a>
+                                    <a class="btn btn-light" href="#" th:href="@{'/recipe/' + ${recipe.id} + '/ingredients'}" role="button">View</a>
                                 </div>
                             </div>
                         </div>
