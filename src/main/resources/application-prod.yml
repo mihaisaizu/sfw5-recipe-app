@@ -1,8 +1,9 @@
 spring:
   datasource:
-    url: jdbc:mysql://localhost:3306/sfg_prod
+    url: jdbc:mysql://localhost:3306/sfg_prod?useSSL=false
     username: sfg_prod_user
     password: mihai
+    platform: mysql
   jpa:
     hibernate:
       ddl-auto: validate
